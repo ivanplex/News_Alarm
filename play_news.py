@@ -1,6 +1,6 @@
 import glob, os
 
-FILE_DIR = "/home/ivan/Downloads/news"
+FILE_DIR = "/home/pi/Downloads/news"
 os.chdir(FILE_DIR)
 
 '''

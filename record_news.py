@@ -6,7 +6,7 @@ EXEC_IPLAYER = './get_iplayer-2.97/get_iplayer'
 BBC_NEWS_AT_6_WEEKDAY_PID = 'b07z8429'
 BBC_NEWS_AT_10_WEEKEND_PID = 'b009m51q'
 
-RECORDING_DESTINATION = '/home/ivan/Downloads/news'
+RECORDING_DESTINATION = '/home/pi/Downloads/news'
 RECORDINGS_SINCE_LAST_X_HOURS = '22'
 
 

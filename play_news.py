@@ -20,12 +20,14 @@ while (len(news_list) > 3):
 
 lastest_news = news_list[-1]
 
-command = "totem --fullscreen "+FILE_DIR+"/"+lastest_news
+os.system('xset dpms force on') #turn screen on
 
-#os.system(command)
+command = "omxplayer "+FILE_DIR+"/"+lastest_news
+os.system(command)
 
 '''
 Get time from time.txt
+'''
 '''
 with open("time.txt", 'r') as timefile:
     time = timefile.read().splitlines()[0]
@@ -40,4 +42,4 @@ minute = formatted_time[1]
 cron = minute+" "+hour+ " * * 1-5 "+command
 print cron
 crontab_manager.add_crontab(cron)
-
+'''

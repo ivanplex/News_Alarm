@@ -8,7 +8,7 @@ cron: full cron command
 '''
 def add_crontab(cron):
     os.system("crontab -l > mycron.temp")
-    os.system("echo "+cron+" >> mycron.temp")
+    os.system("echo '"+cron+"' >> mycron.temp")
     os.system("crontab mycron.temp")
     os.system("rm mycron.temp")
     return True

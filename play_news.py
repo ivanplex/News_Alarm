@@ -1,7 +1,8 @@
-import glob, os, time_reader, crontab_manager
+import glob, os, time_reader, crontab_manager, ConfigParser
 
-
-FILE_DIR = "/home/pi/Downloads/news"
+config = ConfigParser.ConfigParser()
+config.read('config')
+FILE_DIR = config.get('Directory', 'RECORDING_DIR')
 
 os.chdir(FILE_DIR)
 

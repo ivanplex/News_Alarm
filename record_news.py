@@ -1,14 +1,17 @@
-import os
-import datetime
+import os, datetime, ConfigParser
 
 EXEC_IPLAYER = './get_iplayer-2.97/get_iplayer'
 
 BBC_NEWS_AT_6_WEEKDAY_KEYWORD = 'BBC News at Six'
 BBC_NEWS_AT_10_WEEKEND_KEYWORD = 'BBC Weekend News'
 
-RECORDING_DESTINATION = '/home/pi/Downloads/news'
+#RECORDING_DESTINATION = '/home/pi/Downloads/news'
 RECORDINGS_SINCE_LAST_X_HOURS = '22'
 
+
+config = ConfigParser.ConfigParser()
+config.read('config')
+RECORDING_DESTINATION = config.get('Directory', 'RECORDING_DIR')
 
 
 '''

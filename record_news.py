@@ -5,14 +5,14 @@ EXEC_IPLAYER = './get_iplayer-2.97/get_iplayer'
 BBC_NEWS_AT_6_WEEKDAY_KEYWORD = 'BBC News at Six'
 BBC_NEWS_AT_10_WEEKEND_KEYWORD = 'BBC Weekend News'
 
-#RECORDING_DESTINATION = '/home/pi/Downloads/news'
 RECORDINGS_SINCE_LAST_X_HOURS = '22'
 
-
+#Get directory from config
 config = ConfigParser.ConfigParser()
 config.read('config')
 RECORDING_DESTINATION = config.get('Directory', 'RECORDING_DIR')
-
+if not os.path.isdir(RECORDING_DESTINATION):   #Create directory if directory don't exist
+	os.makedirs(RECORDING_DESTINATION)
 
 '''
 Get date in the format YYYYmmdd

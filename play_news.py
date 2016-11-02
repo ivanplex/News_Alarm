@@ -1,7 +1,7 @@
 import glob, os, time_reader, crontab_manager, ConfigParser
 
 config = ConfigParser.ConfigParser()
-config.read('config')
+config.read('./config')
 FILE_DIR = config.get('Directory', 'RECORDING_DIR')
 
 os.chdir(FILE_DIR)

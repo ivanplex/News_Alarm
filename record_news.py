@@ -1,4 +1,4 @@
-import os, datetime, ConfigParser
+import os, sys, datetime, ConfigParser
 
 EXEC_IPLAYER = './get_iplayer-2.97/get_iplayer'
 
@@ -27,6 +27,10 @@ where 0 is Sunday and 6 is Saturday
 weekday = int(datetime.date.today().strftime("%w"))
 
 command_arguments = ' --file-prefix '+dateToday+' --available-since '+RECORDINGS_SINCE_LAST_X_HOURS+' --modes=hlsvhigh --force -o '+RECORDING_DESTINATION+' --get'
+
+if(!internet()):
+    sys.exist()
+
 
 if(weekday in range(1,5)):
 	print 'Recording weekday 6pm evening news.'
